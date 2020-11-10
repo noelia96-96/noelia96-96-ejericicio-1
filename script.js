@@ -22,66 +22,117 @@
 // Utilizad constantes siempre que sea posible.
 // Suerte!
 
-//Toda la funcionalidad en este script
-
-
-
 var arrayUsers = new Array(7);
 
 //Funcion crear usuarios
 function createUsers(){
-   var user1 = new Object();
-    user1.name = 'usuario1';
-    user1.country = 'spain';
-    user1.money = 199;
-    user1.premiumAccount = 'true';
+  arrayUsers = [ 
+    {
+      name: "user1",
+      country: "spain",
+      money : 199,
+      premiumAccount : true
+    },
 
-    var user2 = new Object();
-      user2.name = 'usuario2';
-      user2.country = 'france';
-      user2.money = 0;
-      user2.premiumAccount = 'false';
+    {
+      name: "user2",
+      country: "france",
+      money : 0,
+      premiumAccount : false
+    },
 
-    var user3 = new Object();
-       user3.name = 'usuario3';
-       user3.country = 'spain';
-       user3.money = 537;
-       user3.premiumAccount = 'false';
+    {
+      name: "user3",
+      country: "spain",
+      money : 537,
+      premiumAccount : false
+    },
 
+    {
+      name: "user4",
+      country: "italy",
+      money : 1004,
+      premiumAccount : true
+    },
 
-    var user4 = new Object();
-       user4.name = 'usuario4';
-       user4.country = 'italy';
-       user4.money = 1004;
-       user4.premiumAccount = 'true';
-   
-    var user5 = new Object();
-       user5.name = 'usuario5';
-       user5.country = 'spain';
-       user5.money = 240;
-       user5.premiumAccount = 'false'
+    {
+      name: "user5",
+      country: "spain",
+      money : 240,
+      premiumAccount : false
+    },
+
+    {
+      name: "user6",
+      country: "ireland",
+      money : 799,
+      premiumAccount : true
+    },
+
+    {
+      name: "user7",
+      country: "spain",
+      money : 3345,
+      premiumAccount : false
+    },
+
+  ]
+
+  
     
-    var user6 = new Object();
-       user6.name = 'usuario6';
-       user6.country = 'ireland';
-       user6.money = 799;
-       user6.premiumAccount = 'true';
-   
-    var user7 = new Object();
-      user7.name = 'usuario7'
-      user7.country = 'spain';
-      user7.money = 3345;
-      user7.premiumAccount = 'false';
+  //  var user1 = new Object();
+  //   user1.name = 'usuario1';
+  //   user1.country = 'spain';
+  //   user1.money = 199;
+  //   user1.premiumAccount = 'true';
 
-      arrayUsers = [user1,user2, user3, user4, user5, user6, user7];
-}
+  //   var user2 = new Object();
+  //     user2.name = 'usuario2';
+  //     user2.country = 'france';
+  //     user2.money = 0;
+  //     user2.premiumAccount = 'false';
+
+  //   var user3 = new Object();
+  //      user3.name = 'usuario3';
+  //      user3.country = 'spain';
+  //      user3.money = 537;
+  //      user3.premiumAccount = 'false';
+
+
+  //   var user4 = new Object();
+  //      user4.name = 'usuario4';
+  //      user4.country = 'italy';
+  //      user4.money = 1004;
+  //      user4.premiumAccount = 'true';
+   
+  //   var user5 = new Object();
+  //      user5.name = 'usuario5';
+  //      user5.country = 'spain';
+  //      user5.money = 240;
+  //      user5.premiumAccount = 'false'
+    
+  //   var user6 = new Object();
+  //      user6.name = 'usuario6';
+  //      user6.country = 'ireland';
+  //      user6.money = 799;
+  //      user6.premiumAccount = 'true';
+   
+  //   var user7 = new Object();
+  //     user7.name = 'usuario7'
+  //     user7.country = 'spain';
+  //     user7.money = 3345;
+  //     user7.premiumAccount = 'false';
+
+    //  arrayUsers = [user1,user2, user3, user4, user5, user6, user7];
+};
 
 //Funcion de filtrado 
-var filterArrayUsers;
-function filterUsers(arrayUsers){
 
+
+function filterUsers(arrayUsers){
+  let filterArrayUsers = [];
   for(let i=0; i < arrayUsers.length; i++){
-    if(arrayUsers[i].money >200){
+    if(arrayUsers[i].money >200 && arrayUsers[i].country == "spain"){
       filterArrayUsers.push(arrayUsers[i]);
     }
   }
@@ -93,6 +144,8 @@ window.addEventListener('load',onLoad);
 
 function onLoad(){
 
+createUsers();
+let filterArrayUsers=filterUsers(arrayUsers);
 console.log(arrayUsers);
 console.log(filterArrayUsers);
 }
