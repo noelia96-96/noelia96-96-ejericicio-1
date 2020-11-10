@@ -9,15 +9,75 @@
 
 // Este array de usuarios debe generarse en una función llamada "createUsers". Al generar el array hay que asignarlo a una variable que haya sido declarada globalmente fuera de la función.
 
-// Después de crear el array, deberéis realizar un filtrado empleando el método del objeto "Array", "filter".
+// Después de crear el array, deberéis realizar un filtrado empleando el método del objeto "Array", "filter". NO HACE FALTA FILTER SE PUEDE USAR BUCLE en el recorrido hacer ese filtrado a mano
+
+//Hacer push si se cumple la condicion
+
 // Este filtrado deberá generar otro array con los usuarios que sean de españa y que tengan más de 200 euros.
+
 // El filtrado se realizará desde una función llamada "filterUsers" que recibirá por parámetros la lista de usuarios y devolverá el array filtrado.
+
 // Las dos últimas instrucciones de la función "onLoad" deben ser dos console.log para mostrar los dos arrays.
+
 // Utilizad constantes siempre que sea posible.
 // Suerte!
 
+//Toda la funcionalidad en este script
+
 window.addEventListener('load',onLoad);
 
+var arrayUsers = new Array(7);
+
+function createUsers(){
+   var user1 = new Object();
+    user1.nombre = 'usuario1';
+    user1.country = 'spain';
+    user1.money = 199;
+    user1.premiumAccount = 'true';
+
+    var user2 = new Object();
+      user2.nombre = 'usuario2';
+      user2.country = 'france';
+      user2.money = 0;
+      user2.premiumAccount = 'false';
+
+    var user3 = new Object();
+       user3.nombre = 'usuario3';
+       user3.country = 'spain';
+       user3.money = 537;
+       user3.premiumAccount = 'false';
+
+
+    var user4 = new Object();
+       user4.nombre = 'usuario4';
+       user4.country = 'italy';
+       user4.money = 1004;
+       user4.premiumAccount = 'true';
+   
+    var user5 = new Object();
+       user5.nombre = 'usuario5';
+       user5.country = 'spain';
+       user5.money = 240;
+       user5.premiumAccount = 'false'
+    
+    var user6 = new Object();
+       user6.nombre = 'usuario6';
+       user6.country = 'ireland';
+       user6.money = 799;
+       user6.premiumAccount = 'true';
+   
+    var user7 = new Object();
+      user7.nombre = 'usuario7'
+      user7.country = 'spain';
+      user7.money = 3345;
+      user7.premiumAccount = 'false';
+
+      arrayUsers = [user1,user2, user3, user4, user5, user6, user7];
+}
+
 function onLoad(){
+
+ 
+
   console.log('hi')
 }
